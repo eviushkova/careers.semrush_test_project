@@ -12,13 +12,16 @@ public class JobApplicationTest extends TestBase {
     private static final String TITLE = "New Stars  Are Born Here";
     private static final String ROLE = "QA Automation Engineer";
     private static final String SEARCHRESULT = "QA Automation Engineer (Force Team)";
-    private static final String NAME = "Elena";
-    private static final String EMAIL = "elenav@test.com";
-    private static final String PHONE = "+35790909090";
+//    private static final String NAME = "Elena";
+//    private static final String EMAIL = "elenav@test.com";
+//    private static final String PHONE = "+35790909090";
     private static final String UPLOADEDCV = "src/test/resources/dummy.pdf";
 
     @Test
     void checkApplicationJobForm () {
+
+        TestData testData = TestData.generate();
+
         step("Open the main page", () -> {
             JobApplicationPages.openPage();
         });
@@ -53,13 +56,13 @@ public class JobApplicationTest extends TestBase {
             JobApplicationPages.clickButton();
         });
         step("Set first name", () -> {
-            JobApplicationPages.setFirstName(NAME);
+            JobApplicationPages.setFirstName(testData.firstName);
         });
         step("Set email", () -> {
-            JobApplicationPages.setEmail(EMAIL);
+            JobApplicationPages.setEmail(testData.email);
         });
         step("Set phone number", () -> {
-            JobApplicationPages.setPhone(PHONE);
+            JobApplicationPages.setPhone(testData.phone);
         });
         step("Upload CV", () -> {
             JobApplicationPages.uploadCV(UPLOADEDCV);
