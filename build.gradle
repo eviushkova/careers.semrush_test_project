@@ -40,9 +40,9 @@ tasks.withType(Test) {
     useJUnitPlatform()
 }
 
-test {
-    useJUnitPlatform()
+tasks.withType(Test) {
     systemProperties(System.getProperties())
+    useJUnitPlatform()
 }
 
 task mainpage_test(type: Test) {
