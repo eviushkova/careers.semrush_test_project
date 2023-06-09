@@ -68,28 +68,28 @@ public class MainPageTests extends TestBase {
         step("Check if Co-founder card exists " + CO_FOUNDER, () -> {
             mainPage.checkTeamMemberCard(CO_FOUNDER);
         });
-        step("Check if CEO card exists " + PRESIDENT, () -> {
+        step("Check if President card exists " + PRESIDENT, () -> {
             mainPage.checkTeamMemberCard(PRESIDENT);
         });
-        step("Check if CEO card exists " + CHIEF_FINANCIAL_OFFICER, () -> {
+        step("Check if Chief Financial Officer card exists " + CHIEF_FINANCIAL_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_FINANCIAL_OFFICER);
         });
-        step("Check if CEO card exists " + CHIEF_SALES_OFFICER, () -> {
+        step("Check if Chief Sales Officer card exists " + CHIEF_SALES_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_SALES_OFFICER);
         });
-        step("Check if CEO card exists " + CHIEF_HR_OFFICER, () -> {
+        step("Check if Chief HR Officer card exists " + CHIEF_HR_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_HR_OFFICER);
         });
-        step("Check if CEO card exists " + CHIEF_OPERATIONS_OFFICER, () -> {
+        step("Check if Chief Operations Officer card exists " + CHIEF_OPERATIONS_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_OPERATIONS_OFFICER);
         });
-        step("Check if CEO card exists " + CHIEF_MARKETING_OFFICER, () -> {
+        step("Check if Chief Marketing Officer card exists " + CHIEF_MARKETING_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_MARKETING_OFFICER);
         });
-        step("Check if CEO card exists " + CHIEF_INFORMATION_OFFICER, () -> {
+        step("Check if Chief Information Officer card exists " + CHIEF_INFORMATION_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_INFORMATION_OFFICER);
         });
-        step("Check if CEO card exists " + GENERAL_COUNSEL_AND_SECRETARY, () -> {
+        step("Check if General Counsel and Secretary card exists " + GENERAL_COUNSEL_AND_SECRETARY, () -> {
             mainPage.checkTeamMemberCard(GENERAL_COUNSEL_AND_SECRETARY);
         });
     }
