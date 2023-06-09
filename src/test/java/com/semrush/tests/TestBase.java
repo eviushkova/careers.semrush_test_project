@@ -16,9 +16,10 @@ public class TestBase {
     static void configure() {
 
         Configuration.baseUrl = System.getProperty("base_url", "https://careers.semrush.com");
-        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browser_version", "100");
+        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+        Configuration.remote = System.getProperty("remote_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.timeout = 10000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
