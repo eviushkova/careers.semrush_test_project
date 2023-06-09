@@ -28,7 +28,6 @@ public class TestBase {
 
         String[] browser = System.getProperty("browser", "chrome:100.0").split(":");
         Configuration.browser = browser[0];
-        Configuration.browserVersion = browser[1];
 
 
         Configuration.browserVersion = System.getProperty("browser_version", "100");
