@@ -9,22 +9,34 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class TestBase {
 
     @BeforeAll
     static void configure() {
 
+        String selenoidUrl = System.getProperty("selenoid_url");
+        String selenoidLoginPassword = System.getProperty("selenoid_login_password");
+        selenoidUrl = selenoidUrl.replaceAll("https://", "");
+        Configuration.remote = "https://" + selenoidLoginPassword + "@" + selenoidUrl;
+        Configuration.pageLoadStrategy = "eager";
+
         Configuration.baseUrl = System.getProperty("base_url", "https://careers.semrush.com");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browser_version", "100");
         Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
-        Configuration.remote = System.getProperty("remote_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.timeout = 10000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
+        Map<String, Object> prop = new HashMap<>();
+        prop.put("enableVNC", true);
+        prop.put("enableVideo", true);
+
+        capabilities.setCapability("selenoid:options", prop);
+
         Configuration.browserCapabilities = capabilities;
 
     }
@@ -39,9 +51,5 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-
-        if (System.getProperty("selenideRemote") != null) {
-            Attach.addVideo();
-        }
     }
 }
