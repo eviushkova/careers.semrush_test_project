@@ -30,7 +30,7 @@ dependencies {
             'com.codeborne:selenide:6.12.3',
             "com.github.javafaker:javafaker:1.0.2",
             "org.junit.jupiter:junit-jupiter:5.9.1",
-            "io.qameta.allure:allure-selenide:2.20.0",
+            "io.qameta.allure:allure-selenide:2.21.0",
             "org.aspectj:aspectjweaver:1.9.9.1",
             'org.slf4j:slf4j-simple:2.0.5'
     )
@@ -38,16 +38,21 @@ dependencies {
 
 tasks.withType(Test) {
     useJUnitPlatform()
-
-    testLogging {
-        lifecycle {
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "short"
-        }
-    }
 }
 
 test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
+}
+
+task mainpage_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "smoke"
+    }
+}
+
+task jobapplication_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "smoke"
+    }
 }

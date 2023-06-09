@@ -56,7 +56,7 @@ public class MainPageTests extends TestBase {
     @DisplayName("Check title name on the main page")
     void checkTitleOnTheMainPage() {
 
-        step("Check title on the main page exists" + TITLE, () -> {
+        step("Check title on the main page exists " + TITLE, () -> {
             mainPage.checkTitle(TITLE);
         });
     }
@@ -66,34 +66,34 @@ public class MainPageTests extends TestBase {
     @DisplayName("Check team members cards in 'Executive Management' block")
     void checkTeamMembersCards() {
 
-        step("Check if CEO card exists" + CEO, () -> {
+        step("Check if CEO card exists " + CEO, () -> {
             mainPage.checkTeamMemberCard(CEO);
         });
-        step("Check if Co-founder card exists" + CO_FOUNDER, () -> {
+        step("Check if Co-founder card exists " + CO_FOUNDER, () -> {
             mainPage.checkTeamMemberCard(CO_FOUNDER);
         });
-        step("Check if CEO card exists" + PRESIDENT, () -> {
+        step("Check if CEO card exists " + PRESIDENT, () -> {
             mainPage.checkTeamMemberCard(PRESIDENT);
         });
-        step("Check if CEO card exists" + CHIEF_FINANCIAL_OFFICER, () -> {
+        step("Check if CEO card exists " + CHIEF_FINANCIAL_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_FINANCIAL_OFFICER);
         });
-        step("Check if CEO card exists" + CHIEF_SALES_OFFICER, () -> {
+        step("Check if CEO card exists " + CHIEF_SALES_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_SALES_OFFICER);
         });
-        step("Check if CEO card exists" + CHIEF_HR_OFFICER, () -> {
+        step("Check if CEO card exists " + CHIEF_HR_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_HR_OFFICER);
         });
-        step("Check if CEO card exists" + CHIEF_OPERATIONS_OFFICER, () -> {
+        step("Check if CEO card exists " + CHIEF_OPERATIONS_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_OPERATIONS_OFFICER);
         });
-        step("Check if CEO card exists" + CHIEF_MARKETING_OFFICER, () -> {
+        step("Check if CEO card exists " + CHIEF_MARKETING_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_MARKETING_OFFICER);
         });
-        step("Check if CEO card exists" + CHIEF_INFORMATION_OFFICER, () -> {
+        step("Check if CEO card exists " + CHIEF_INFORMATION_OFFICER, () -> {
             mainPage.checkTeamMemberCard(CHIEF_INFORMATION_OFFICER);
         });
-        step("Check if CEO card exists" + GENERAL_COUNSEL_AND_SECRETARY, () -> {
+        step("Check if CEO card exists " + GENERAL_COUNSEL_AND_SECRETARY, () -> {
             mainPage.checkTeamMemberCard(GENERAL_COUNSEL_AND_SECRETARY);
         });
     }
@@ -102,13 +102,13 @@ public class MainPageTests extends TestBase {
     @Tag("Smoke")
     @DisplayName("Check badges in footer")
     void checkBadges() {
-        step("Check if badge exists" + BADGE_GREAT_PLACE, () -> {
+        step("Check if badge exists " + BADGE_GREAT_PLACE, () -> {
             mainPage.checkBadgeGreatPlace(BADGE_GREAT_PLACE);
         });
-        step("Check if badge exists" + BADGE_FAST500, () -> {
+        step("Check if badge exists " + BADGE_FAST500, () -> {
             mainPage.checkBadgeFast500(BADGE_FAST500);
         });
-        step("Check if badge exists" + BADGE_DIVERSITY, () -> {
+        step("Check if badge exists " + BADGE_DIVERSITY, () -> {
             mainPage.checkBadgeDiversity(BADGE_DIVERSITY);
         });
     }
@@ -117,22 +117,22 @@ public class MainPageTests extends TestBase {
     @Tag("Smoke")
     @DisplayName("Check social links in footer")
     void checkSocialLinks() {
-        step("Check social link" + FACEBOOK, () -> {
+        step("Check social link " + FACEBOOK, () -> {
             mainPage.checkFacebookLink(FACEBOOK);
         });
-        step("Check social link" + TIKTOK, () -> {
+        step("Check social link " + TIKTOK, () -> {
             mainPage.checkTiKTokLink(TIKTOK);
         });
-        step("Check social link" + INSTAGRAM, () -> {
+        step("Check social link " + INSTAGRAM, () -> {
             mainPage.checkInstagramLink(INSTAGRAM);
         });
-        step("Check social link" + GLASSDOOR, () -> {
+        step("Check social link " + GLASSDOOR, () -> {
             mainPage.checkGlassdoorLink(GLASSDOOR);
         });
-        step("Check social link" + YOUTUBE, () -> {
+        step("Check social link " + YOUTUBE, () -> {
             mainPage.checkYoutubeLink(YOUTUBE);
         });
-        step("Check social link" + LINKEDIN, () -> {
+        step("Check social link " + LINKEDIN, () -> {
             mainPage.checkYLinkedinLink(LINKEDIN);
         });
 
