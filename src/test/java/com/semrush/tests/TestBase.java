@@ -6,36 +6,31 @@ import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 public class TestBase {
 
     @BeforeAll
-    static void beforeAll() {
+    static void configure() {
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
-        String browser = System.getProperty("browser", "chrome");
-        String browserVersion = System.getProperty("browserVersion", "100");
-        String browserSize = System.getProperty("browserSize", "1920x1080");
-        String remoteURL = System.getProperty("selenideRemote");
+        Configuration.baseUrl = System.getProperty("base_url", "https://careers.semrush.com");
+        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browser_version", "100");
+        Configuration.timeout = 10000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        if (remoteURL != null) {
-            Configuration.remote = remoteURL;
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
-        }
-
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-        Configuration.baseUrl = "https://careers.semrush.com";
-        Configuration.browser = browser;
-        Configuration.browserVersion = browserVersion;
-        Configuration.browserSize = browserSize;
 
+    }
 
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @AfterEach
