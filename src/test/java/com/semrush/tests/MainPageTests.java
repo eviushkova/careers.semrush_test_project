@@ -1,6 +1,8 @@
 package com.semrush.tests;
 
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import pages.MainPage;
 
@@ -43,11 +45,6 @@ public class MainPageTests extends TestBase {
         step("Decline cookies", () -> {
             mainPage.declineCookies();
         });
-    }
-
-    @AfterEach
-    void closeBrowser() {
-        Selenide.closeWebDriver();
     }
 
 
