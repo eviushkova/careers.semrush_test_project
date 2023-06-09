@@ -20,7 +20,7 @@ public class JobApplicationForm extends TestBase {
 
     @AllureId("")
     @Test
-    @Tag("Smoke")
+    @Tag("smoke")
     @DisplayName("Check of filling out a job application form")
     void checkApplicationJobForm() {
 

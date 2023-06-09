@@ -46,7 +46,7 @@ public class MainPageTests extends TestBase {
 
 
     @Test
-    @Tag("Smoke")
+    @Tag("smoke")
     @DisplayName("Check title name on the main page")
     void checkTitleOnTheMainPage() {
         preconditions();
@@ -57,7 +57,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("Smoke")
+    @Tag("smoke")
     @DisplayName("Check team members cards in 'Executive Management' block")
     void checkTeamMembersCards() {
         preconditions();
@@ -95,7 +95,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("Smoke")
+    @Tag("smoke")
     @DisplayName("Check badges in footer")
     void checkBadges() {
         preconditions();
@@ -112,7 +112,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("Smoke")
+    @Tag("smoke")
     @DisplayName("Check social links in footer")
     void checkSocialLinks() {
         preconditions();

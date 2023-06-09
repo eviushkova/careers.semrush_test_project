@@ -8,7 +8,7 @@ repositories {
 }
 
 allure {
-    report {
+    report {4
         version.set("2.22.0")
     }
     adapter {
