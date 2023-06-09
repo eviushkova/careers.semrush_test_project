@@ -9,13 +9,13 @@ repositories {
 
 allure {
     report {
-        version.set("2.21.0")
+        version.set("2.22.0")
     }
     adapter {
         aspectjWeaver.set(true)
         frameworks {
             junit5 {
-                adapterVersion.set("2.21.0")
+                adapterVersion.set("2.22.0")
             }
         }
     }
@@ -27,11 +27,11 @@ tasks.withType(JavaCompile).configureEach {
 
 dependencies {
     testImplementation(
-            'com.codeborne:selenide:6.12.3',
-            "com.github.javafaker:javafaker:1.0.2",
-            "org.junit.jupiter:junit-jupiter:5.9.1",
-            "io.qameta.allure:allure-selenide:2.21.0",
-            "org.aspectj:aspectjweaver:1.9.9.1",
+            'com.codeborne:selenide:6.13.1',
+            'com.github.javafaker:javafaker:1.0.2',
+            'org.junit.jupiter:junit-jupiter:5.9.3',
+            'io.qameta.allure:allure-selenide:2.22.0',
+            'org.aspectj:aspectjweaver:1.9.9.1',
             'org.slf4j:slf4j-simple:2.0.5'
     )
 }
