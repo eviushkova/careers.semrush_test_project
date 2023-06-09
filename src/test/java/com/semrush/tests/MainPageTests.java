@@ -1,9 +1,8 @@
 package com.semrush.tests;
 
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
 import static io.qameta.allure.Allure.step;
@@ -33,8 +32,6 @@ public class MainPageTests extends TestBase {
     private static final String YOUTUBE = "https://www.youtube.com/user/SemrushHQ";
     private static final String LINKEDIN = "https://linkedin.com/company/semrush";
 
-
-    @BeforeEach
     void preconditions() {
         step("Open the main page", () -> {
             mainPage.openPage();
@@ -52,6 +49,7 @@ public class MainPageTests extends TestBase {
     @Tag("Smoke")
     @DisplayName("Check title name on the main page")
     void checkTitleOnTheMainPage() {
+        preconditions();
 
         step("Check title on the main page exists " + TITLE, () -> {
             mainPage.checkTitle(TITLE);
@@ -62,6 +60,7 @@ public class MainPageTests extends TestBase {
     @Tag("Smoke")
     @DisplayName("Check team members cards in 'Executive Management' block")
     void checkTeamMembersCards() {
+        preconditions();
 
         step("Check if CEO card exists " + CEO, () -> {
             mainPage.checkTeamMemberCard(CEO);
@@ -99,6 +98,8 @@ public class MainPageTests extends TestBase {
     @Tag("Smoke")
     @DisplayName("Check badges in footer")
     void checkBadges() {
+        preconditions();
+
         step("Check if badge exists " + BADGE_GREAT_PLACE, () -> {
             mainPage.checkBadgeGreatPlace(BADGE_GREAT_PLACE);
         });
@@ -114,6 +115,8 @@ public class MainPageTests extends TestBase {
     @Tag("Smoke")
     @DisplayName("Check social links in footer")
     void checkSocialLinks() {
+        preconditions();
+
         step("Check social link " + FACEBOOK, () -> {
             mainPage.checkFacebookLink(FACEBOOK);
         });

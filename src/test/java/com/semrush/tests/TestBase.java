@@ -47,8 +47,8 @@ public class TestBase {
 
     }
 
-    @BeforeAll
-    public static void setUpAllure() {
+    @BeforeEach
+    public void setUpAllure() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
