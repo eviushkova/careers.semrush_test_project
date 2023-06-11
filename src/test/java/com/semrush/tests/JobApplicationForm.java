@@ -1,6 +1,5 @@
 package com.semrush.tests;
 
-import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -18,7 +17,6 @@ public class JobApplicationForm extends TestBase {
     private static final String UPLOADEDCV = "src/test/resources/dummy.pdf";
 
 
-    @AllureId("")
     @Test
     @Tag("smoke")
     @DisplayName("Check of filling out a job application form")
