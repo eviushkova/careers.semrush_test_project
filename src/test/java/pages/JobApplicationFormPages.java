@@ -102,7 +102,7 @@ public class JobApplicationFormPages {
     }
 
     public JobApplicationFormPages checkSubmitButton(String buttonNameS) {
-        submitButton.$(byText(buttonNameS)).scrollIntoView(true).shouldBe(visible);
+        submitButton.shouldHave(text(buttonNameS));
 
         return this;
     }
