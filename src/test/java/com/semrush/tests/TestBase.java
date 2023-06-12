@@ -18,11 +18,11 @@ public class TestBase {
     @BeforeAll
     static void configure() {
 
-//        String selenoidUrl = System.getProperty("selenoid_url");
-//        String selenoidLoginPassword = System.getProperty("selenoid_login_password");
-//        selenoidUrl = selenoidUrl.replaceAll("https://", "");
-//        Configuration.remote = "https://" + selenoidLoginPassword + "@" + selenoidUrl;
-//        Configuration.pageLoadStrategy = "eager";
+        String selenoidUrl = System.getProperty("selenoid_url");
+        String selenoidLoginPassword = System.getProperty("selenoid_login_password");
+        selenoidUrl = selenoidUrl.replaceAll("https://", "");
+        Configuration.remote = "https://" + selenoidLoginPassword + "@" + selenoidUrl;
+        Configuration.pageLoadStrategy = "eager";
 
         Configuration.baseUrl = System.getProperty("base_url", "https://careers.semrush.com");
 
