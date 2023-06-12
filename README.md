@@ -2,6 +2,8 @@
 
 > Semrush Holdings, Inc. is an American public company that offers a SaaS platform known as Semrush. The platform is often used for keyword research and online ranking data, including metrics such as search volume, Keyword research and cost per click.
 
+<img title="Jenkins Build" src="images/screens/MainPage.png">
+
 ## :pushpin: Content:
 
 - [Stack of technologies](#computer-stack-of-technologies)
