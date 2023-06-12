@@ -102,7 +102,7 @@ And also we can see from <code>Jira</code>, which tests been added to <code>Allu
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications
 
 <p align="center">
-<img width="50%" title="Telegram Notifications" src="images/screens/telegram.png">
+<img width="50%" title="Telegram Notifications" src="images/screens/Telegram.png">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Video of an example of running a test in Selenoid
