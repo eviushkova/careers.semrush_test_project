@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -18,11 +19,12 @@ public class JobApplicationFormPages {
             searchButton = $(".JobsSearch__SearchButton-sc-8zx7e9-6"),
             jobList = $("#jobs-list"),
             jobResult = $(".JobStyled__JobTitle-sc-1ktxghj-0"),
-            applyForThisJobButton = $(".Button-sc-nfo0lm-0"),
+            applyForThisJobButton = $(".JobsApply__JobsApplyBlock-sc-s4c9o0-0"),
             firstNameInput = $("#firstName"),
             emailInput = $("#email"),
             phoneInput = $("#phone"),
-            uploadCVInput = $("#upload");
+            uploadCVInput = $("#upload"),
+            submitButton = $(".SubmitButton__Button-sc-1nfzbya-0");
 
     public JobApplicationFormPages openPage() {
         open("https://careers.semrush.com");
@@ -69,8 +71,8 @@ public class JobApplicationFormPages {
         return this;
     }
 
-    public JobApplicationFormPages clickButton() {
-        applyForThisJobButton.click();
+    public JobApplicationFormPages clickButton(String buttonNameA) {
+        applyForThisJobButton.$(byText(buttonNameA)).click();
 
         return this;
     }
@@ -99,8 +101,8 @@ public class JobApplicationFormPages {
         return this;
     }
 
-    public JobApplicationFormPages checkApplyButton() {
-        applyForThisJobButton.scrollIntoView(true).shouldBe(visible);
+    public JobApplicationFormPages checkSubmitButton(String buttonNameS) {
+        submitButton.$(byText(buttonNameS)).scrollIntoView(true).shouldBe(visible);
 
         return this;
     }

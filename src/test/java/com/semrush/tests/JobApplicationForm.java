@@ -49,10 +49,11 @@ public class JobApplicationForm extends TestBase {
             jobApplicationFormPages.checkJobList(ROLE, SEARCHRESULT);
         });
         step("Click to the button 'Apply for this job'", () -> {
-            jobApplicationFormPages.clickButton();
+            jobApplicationFormPages.clickButton("Apply for this job");
+            // Action-sc-clo9bl-0 Button-sc-nfo0lm-0 gKnwqK
         });
         step("Set first name", () -> {
-//            jobApplicationFormPages.setFirstName(testData.firstName);
+            jobApplicationFormPages.setFirstName(testData.firstName);
         });
         step("Set email", () -> {
             jobApplicationFormPages.setEmail(testData.email);
@@ -64,7 +65,7 @@ public class JobApplicationForm extends TestBase {
             jobApplicationFormPages.uploadCV(UPLOADEDCV);
         });
         step("Check the button 'Apply for this job'", () -> {
-            jobApplicationFormPages.checkApplyButton();
+            jobApplicationFormPages.checkSubmitButton("Apply for this job");
         });
     }
 }
