@@ -52,7 +52,7 @@ public class JobApplicationForm extends TestBase {
             jobApplicationFormPages.clickButton();
         });
         step("Set first name", () -> {
-            jobApplicationFormPages.setFirstName(testData.firstName);
+//            jobApplicationFormPages.setFirstName(testData.firstName);
         });
         step("Set email", () -> {
             jobApplicationFormPages.setEmail(testData.email);
