@@ -16,7 +16,7 @@ public class JobApplicationFormPages {
             cookies = $(".ch2-deny-all-btn"),
             jobs = $(".JobsBlock__Jobs-sc-1o1ezaw-0"),
             searchInput = $("#search-jobs"),
-            searchButton = $(".JobsSearch__SearchButton-sc-8zx7e9-6"),
+            searchButton = $(".JobsBlock__JobsSearchBlock-sc-1o1ezaw-2").$(byText("Search")),
             jobList = $("#jobs-list"),
             jobResult = $(".JobStyled__JobTitle-sc-1ktxghj-0"),
             applyForThisJobButton = $(".JobsApply__JobsApplyBlock-sc-s4c9o0-0"),
@@ -28,12 +28,6 @@ public class JobApplicationFormPages {
 
     public JobApplicationFormPages openPage() {
         open("https://careers.semrush.com");
-
-        return this;
-    }
-
-    public JobApplicationFormPages closeModalForm() {
-        modalForm.click();
 
         return this;
     }

@@ -7,6 +7,7 @@ import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.HashMap;
@@ -43,9 +44,11 @@ public class TestBase {
         capabilities.setCapability("selenoid:options", prop);
 
         Configuration.browserCapabilities = capabilities;
+    }
 
+    @BeforeEach
+    void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
     }
 
     @AfterEach
@@ -53,7 +56,9 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Attach.addVideo();
+        if (Configuration.remote != null) {
+            Attach.addVideo();
+        }
         Selenide.closeWebDriver();
     }
 }

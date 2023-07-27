@@ -19,18 +19,18 @@
 ## :computer: Stack of technologies
 
 <p align="center">
-<img width="6%" title="Java" src="images/logo/Java.svg">
-<img width="6%" title="IntelliJ IDEA" src="images/logo/Idea.svg">
-<img width="6%" title="GitHub" src="images/logo/GitHub.svg">
-<img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
-<img width="6%" title="Gradle" src="images/logo/Gradle.svg">
-<img width="6%" title="Selenide" src="images/logo/Selenide.svg">
-<img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
-<img width="6%" title="Allure Report" src="images/logo/Allure.svg">
-<img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
-<img width="6%" title="Telegram" src="images/logo/Telegram.svg">
-<img width="6%" title="Jira" src="images/logo/Jira.svg">
-<img width="6%" title="Allure TestOps" src="images/logo/Allure_TO.svg">
+<a href="https://www.jetbrains.com/idea/"><img width="6%" title="IntelliJ IDEA" src="images/logo/Idea.svg">
+<a href="https://www.java.com/"><img width="6%" title="Java" src="images/logo/Java.svg">
+<a href="https://selenide.org/"><img width="6%" title="Selenide" src="images/logo/Selenide.svg">
+<a href="https://aerokube.com/selenoid/"><img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
+<a href="https://github.com/allure-framework/allure2"><img width="6%" title="Allure Report" src="images/logo/Allure.svg">
+<a href="https://qameta.io/"><img width="5%" title="Allure TestOps" src="images/logo/Allure_TO.svg">
+<a href="https://gradle.org/"><img width="6%" title="Gradle" src="images/logo/Gradle.svg">
+<a href="https://junit.org/junit5/"><img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
+<a href="https://github.com/"><img width="6%" title="GitHub" src="images/logo/GitHub.svg">
+<a href="https://www.jenkins.io/"><img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
+<a href="https://web.telegram.org/"><img width="6%" title="Telegram" src="images/logo/Telegram.svg">
+<a href="https://www.atlassian.com/ru/software/jira"><img width="5%" title="Jira" src="images/logo/Jira.svg">
 </p>
 
 
@@ -66,7 +66,7 @@ ${TASK}
 * <code>SELENOID_URL</code> is the address of the remote server where the tests will be run.
 
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Build in [Jenkins](https://jenkins.autotests.cloud/job/lesson15_testProject_eviush/)
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Build in [Jenkins](https://jenkins.autotests.cloud/job/Students/job/lesson15_testProject_eviush/)
 <p align="center">
 <img title="Jenkins Build" src="images/screens/JenkinsBuild.png">
 

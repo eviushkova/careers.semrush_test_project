@@ -3,13 +3,13 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
 
     SelenideElement
-            modalForm = $(".Modal__Close-sc-1vmsgmv-1"),
             cookies = $(".ch2-deny-all-btn"),
             blockTitle = $(".Content__MainBannerTitle-sc-z3mvp8-1"),
             teamMember = $(".Team__RowTeam-sc-bz1m27-0"),
@@ -21,17 +21,12 @@ public class MainPage {
             instagram = $(".SocialLink__Instagram-sc-17bee46-6"),
             glassdoor = $(".SocialLink__GlassDoor-sc-17bee46-7"),
             youtube = $(".SocialLink__Youtube-sc-17bee46-3"),
-            linkedin = $(".SocialLink__LinkedIn-sc-17bee46-4");
-
+            linkedin = $(".SocialLink__LinkedIn-sc-17bee46-4"),
+            benefitBlock = $(".Content__BenefitTitle-sc-1sf0fme-1"),
+            officeLocationsBlock = $(".Count__LocationsCountBlock-sc-9fduka-0");
 
     public MainPage openPage() {
         open("https://careers.semrush.com");
-
-        return this;
-    }
-
-    public MainPage closeModalForm() {
-        modalForm.click();
 
         return this;
     }
@@ -47,7 +42,6 @@ public class MainPage {
 
         return this;
     }
-
 
     public MainPage checkTeamMemberCard(String role) {
         teamMember.shouldHave(text(role));
@@ -103,10 +97,21 @@ public class MainPage {
         return this;
     }
 
-    public MainPage checkYLinkedinLink(String link) {
+    public MainPage checkLinkedinLink(String link) {
         linkedin.parent().shouldHave(href(link));
 
         return this;
     }
 
+    public MainPage checkBenefitBlockTitlesValue(String title) {
+        benefitBlock.$(byText(title));
+
+        return this;
+    }
+
+    public MainPage checkOfficeLocationsBlockTitle(String title) {
+        officeLocationsBlock.shouldHave(text(title));
+
+        return this;
+    }
 }
