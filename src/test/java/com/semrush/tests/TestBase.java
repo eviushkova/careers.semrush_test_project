@@ -10,22 +10,28 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.openqa.selenium.chrome.ChromeOptions.CAPABILITY;
 
 public class TestBase {
+
+    protected static boolean isRemote = Boolean.getBoolean("isRemote");
 
     @BeforeAll
     static void configure() {
 
-        String selenoidUrl = System.getProperty("selenoid_url");
-        String selenoidLoginPassword = System.getProperty("selenoid_login_password");
-        selenoidUrl = selenoidUrl.replaceAll("https://", "");
-        Configuration.remote = "https://" + selenoidLoginPassword + "@" + selenoidUrl;
-        Configuration.pageLoadStrategy = "eager";
+        if (isRemote) {
+            String selenoidUrl = System.getProperty("selenoid_url");
+            String selenoidLoginPassword = System.getProperty("selenoid_login_password");
+            selenoidUrl = selenoidUrl.replaceAll("https://", "");
+            Configuration.remote = "https://" + selenoidLoginPassword + "@" + selenoidUrl;
+            Configuration.pageLoadStrategy = "eager";
+        }
 
         Configuration.baseUrl = System.getProperty("base_url", "https://careers.semrush.com");
 
@@ -38,11 +44,15 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
         Configuration.timeout = 10000;
 
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         Map<String, Object> prop = new HashMap<>();
         prop.put("enableVNC", true);
         prop.put("enableVideo", true);
 
+        capabilities.setCapability(CAPABILITY, options);
         capabilities.setCapability("selenoid:options", prop);
 
         Configuration.browserCapabilities = capabilities;
