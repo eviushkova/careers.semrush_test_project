@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Elena Viushkova")
 @Tag("ui")
-public class MainPageTests extends TestBase {
+public class MainPageTest extends TestBase {
 
     static MainPage mainPage = new MainPage();
 

@@ -3,7 +3,6 @@ package com.semrush.tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-
 import com.semrush.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -24,13 +23,26 @@ public class TestBase {
     @BeforeAll
     static void configure() {
 
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        Map<String, Object> prop = new HashMap<>();
+        prop.put("enableVNC", true);
+        prop.put("enableVideo", true);
+
+        capabilities.setCapability("selenoid:options", prop);
+
         if (isRemote) {
             String selenoidUrl = System.getProperty("selenoid_url");
             String selenoidLoginPassword = System.getProperty("selenoid_login_password");
             selenoidUrl = selenoidUrl.replaceAll("https://", "");
             Configuration.remote = "https://" + selenoidLoginPassword + "@" + selenoidUrl;
             Configuration.pageLoadStrategy = "eager";
+        } else {
+            ChromeOptions options = new ChromeOptions();
+            options.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
+            capabilities.setCapability(CAPABILITY, options);
         }
+
+        Configuration.browserCapabilities = capabilities;
 
         Configuration.baseUrl = System.getProperty("base_url", "https://careers.semrush.com");
 
@@ -42,19 +54,6 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browser_version", "100");
         Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
         Configuration.timeout = 10000;
-
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        Map<String, Object> prop = new HashMap<>();
-        prop.put("enableVNC", true);
-        prop.put("enableVideo", true);
-
-        capabilities.setCapability(CAPABILITY, options);
-        capabilities.setCapability("selenoid:options", prop);
-
-        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach

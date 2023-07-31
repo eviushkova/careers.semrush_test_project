@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Elena Viushkova")
 @Tag("ui")
-public class JobApplicationForm extends TestBase {
+public class JobApplicationFormTest extends TestBase {
 
     static JobApplicationFormPages jobApplicationFormPages = new JobApplicationFormPages();
 
