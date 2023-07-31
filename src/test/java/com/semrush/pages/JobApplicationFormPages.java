@@ -1,4 +1,4 @@
-package pages;
+package com.semrush.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -12,8 +12,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class JobApplicationFormPages {
 
     SelenideElement
-            modalForm = $(".Modal__Close-sc-1vmsgmv-1"),
-            cookies = $(".ch2-deny-all-btn"),
             jobs = $(".JobsBlock__Jobs-sc-1o1ezaw-0"),
             searchInput = $("#search-jobs"),
             searchButton = $(".JobsBlock__JobsSearchBlock-sc-1o1ezaw-2").$(byText("Search")),
@@ -28,19 +26,6 @@ public class JobApplicationFormPages {
 
     public JobApplicationFormPages openPage() {
         open("https://careers.semrush.com");
-
-        return this;
-    }
-
-    public JobApplicationFormPages declineCookies() {
-        cookies.click();
-
-        return this;
-    }
-
-    public JobApplicationFormPages checkJobsBlock() {
-        jobs.scrollIntoView(true);
-        jobs.shouldBe(visible);
 
         return this;
     }

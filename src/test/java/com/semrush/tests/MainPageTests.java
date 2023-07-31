@@ -1,10 +1,11 @@
 package com.semrush.tests;
 
+import com.semrush.pages.MainPage;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.MainPage;
+
 
 import static com.semrush.tests.TestData.*;
 import static io.qameta.allure.Allure.step;
@@ -18,9 +19,6 @@ public class MainPageTests extends TestBase {
     void preconditions() {
         step("Open the main page", () ->
             mainPage.openPage()
-        );
-        step("Decline cookies", () ->
-            mainPage.declineCookies()
         );
     }
 

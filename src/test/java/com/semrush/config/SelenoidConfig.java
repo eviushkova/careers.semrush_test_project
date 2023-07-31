@@ -1,4 +1,4 @@
-package config;
+package com.semrush.config;
 
 import org.aeonbits.owner.Config;
 
@@ -12,12 +12,4 @@ public interface SelenoidConfig extends Config {
 
     @Config.Key("selenoidVideoUrl")
     String selenoidVideoUrl();
-//    @Key("userName")
-//    String userName();
-//
-//    @Key("password")
-//    String password();
-//
-//    @Key("remoteURL")
-//    String remoteUrl();
 }

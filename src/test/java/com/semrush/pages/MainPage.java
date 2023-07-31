@@ -1,4 +1,4 @@
-package pages;
+package com.semrush.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class MainPage {
 
     SelenideElement
-            cookies = $(".ch2-deny-all-btn"),
             blockTitle = $(".Content__MainBannerTitle-sc-z3mvp8-1"),
             teamMember = $(".Team__RowTeam-sc-bz1m27-0"),
             badgeGreatPlace = $(".great-place"),
@@ -27,12 +26,6 @@ public class MainPage {
 
     public MainPage openPage() {
         open("https://careers.semrush.com");
-
-        return this;
-    }
-
-    public MainPage declineCookies() {
-        cookies.click();
 
         return this;
     }

@@ -1,10 +1,11 @@
 package com.semrush.tests;
 
+import com.semrush.pages.JobApplicationFormPages;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.JobApplicationFormPages;
+
 
 import static com.semrush.tests.TestData.*;
 import static io.qameta.allure.Allure.step;
@@ -24,9 +25,6 @@ public class JobApplicationForm extends TestBase {
 
         step("Open the main page", () ->
             jobApplicationFormPages.openPage()
-        );
-        step("Decline cookies", () ->
-            jobApplicationFormPages.declineCookies()
         );
         step("Click on the search input", () ->
             jobApplicationFormPages.searchJobs("")

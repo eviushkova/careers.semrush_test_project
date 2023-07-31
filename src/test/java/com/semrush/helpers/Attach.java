@@ -1,7 +1,8 @@
-package helpers;
+package com.semrush.helpers;
 
 import com.codeborne.selenide.Selenide;
-import config.SelenoidConfig;
+
+import com.semrush.config.SelenoidConfig;
 import io.qameta.allure.Attachment;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.OutputType;
