@@ -66,13 +66,13 @@ ${TASK}
 * <code>SELENOID_URL</code> is the address of the remote server where the tests will be run.
 
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Build in [Jenkins](https://jenkins.autotests.cloud/job/Students/job/lesson15_testProject_eviush/)
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Build in [Jenkins](https://jenkins.autotests.cloud/job/Students/job/careers_semrush_test_project/)
 <p align="center">
 <img title="Jenkins Build" src="images/screens/JenkinsBuild.png">
 
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure.svg"> [Allure](https://jenkins.autotests.cloud/job/lesson15_testProject_eviush/47/allure/) report
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure.svg"> [Allure](https://jenkins.autotests.cloud/job/Students/job/careers_semrush_test_project/56/allure/#) report
 ### Overview
 
 <p align="center">
